@@ -72,7 +72,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-LUNA_IMG = "https://telegra.ph/file/0029f6059520da3a9e383.jpg"
+professor_IMG = "https://telegra.ph/file/0029f6059520da3a9e383.jpg"
 
 PM_START_TEXT = """
 ╭──────────────
@@ -223,7 +223,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            LUNA_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            professor_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -356,9 +356,9 @@ def help_button(update, context):
 
 
 @run_async
-def luna_about_callback(update, context):
+def professor_about_callback(update, context):
     query = update.callback_query
-    if query.data == "luna_":
+    if query.data == "professor_":
         query.message.edit_text(
             text="""Hi again! I'am a full-fledged group management bot built to help you manage your group easily.\n
                     \nI can do lot of stuff, some of them are:
@@ -374,17 +374,17 @@ def luna_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Setup Guide", callback_data="luna_aselole"
+                            text="Setup Guide", callback_data="professor_aselole"
                         ),
                         InlineKeyboardButton(
-                            text="T & C", callback_data="luna_puqi"
+                            text="T & C", callback_data="professor_puqi"
                         ),
                     ],
-                    [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="luna_back")],
+                    [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="professor_back")],
                 ]
             ),
         )
-    elif query.data == "luna_back":
+    elif query.data == "professor_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -393,13 +393,13 @@ def luna_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "luna_basichelp":
+    elif query.data == "professor_basichelp":
         query.message.edit_text(
             text=f"**──「 Basic Guide 」──**"
             f"\n\n1.) first, add me to your group.\n"
             f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
             f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) add @LunaAssistant to your group or type /join to invite her.\n"
+            f"4.) add @professorAssistant to your group or type /join to invite her.\n"
             f"5.) turn on the video chat first before start to play music.\n"
             f"\n📌 if userbot doesn't join voice chat make sure voice chat is active, or type /leave then type /join again..",
             parse_mode=ParseMode.MARKDOWN,
@@ -407,20 +407,20 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="luna_notes"),
+                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="professor_admin"),
+                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="professor_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="luna_support"),
+                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="professor_support"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_back"),
+                    InlineKeyboardButton(text="Back", callback_data="professor_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "luna_admin":
+    elif query.data == "professor_admin":
         query.message.edit_text(
             text=f"**──「 Basic Guide 」──**"
             f"\n\n/play (song name) - play song from youtube"
@@ -433,11 +433,11 @@ def luna_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="professor_basichelp")]]
             ),
         )
 
-    elif query.data == "luna_notes":
+    elif query.data == "professor_notes":
         query.message.edit_text(
             text=f"──「 Advanced CMD 」──\n\n"
             f"/start (in group) - see the bot alive status"
@@ -447,7 +447,7 @@ def luna_about_callback(update, context):
             f"\n/id - show the group/user id & other",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="professor_basichelp")]]
             ),
         )
     elif query.data == "Miss_AkshiV1_Support":
@@ -469,13 +469,13 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="professor_basichelp"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "luna_credit":
+    elif query.data == "professor_credit":
         query.message.edit_text(
             text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Lᴜɴᴀ Dᴇᴠ's` </b>\n"
             f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ Lᴜɴᴀ",
@@ -491,37 +491,37 @@ def luna_about_callback(update, context):
                     InlineKeyboardButton(text="professor", url="https://t.me/tdrki_1"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="professor_basichelp"),
                  
                  ]
                 ]
             ),
         )
 
-    elif query.data == "luna_aselole":
+    elif query.data == "professor_aselole":
         query.message.edit_text(
             text=f"｢ Setup Guide 」\n"
                  f"\nYou can add me to your group by clicking this link and selecting the chat.\n"
                  f"\nRead Admin Permissions and Anti-spam for basic info.\n"
                  f"\nRead Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)\n"
-                 f"\nIf you do need help with further instructions feel free to ask in @lunaXresso.",
+                 f"\nIf you do need help with further instructions feel free to ask in @professorXresso.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins Permissions", callback_data="luna_asu"),
-                    InlineKeyboardButton(text="Anti Spam", callback_data="luna_asi"),
+                    InlineKeyboardButton(text="Admins Permissions", callback_data="professor_asu"),
+                    InlineKeyboardButton(text="Anti Spam", callback_data="professor_asi"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_"),
+                    InlineKeyboardButton(text="Back", callback_data="professor_"),
                  
                  ]
                 ]
             ),
         )
 
-    elif query.data == "luna_asu":
+    elif query.data == "professor_asu":
         query.message.edit_text(
             text=f"｢ Admin Permissions 」\n"
                      f"\nTo avoid slowing down, professor caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), professor will only find out ~10 minutes later.\n"
@@ -532,15 +532,15 @@ def luna_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_aselole")]]
+                [[InlineKeyboardButton(text="Back", callback_data="professor_aselole")]]
             ),
         )
 
-    elif query.data == "luna_asi":
+    elif query.data == "professor_asi":
         query.message.edit_text(
             text=f"｢ Anti-Spam Settings 」\n"
                      f"\nAntispam: "
-                     f"\nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @lunaXresso\n"
+                     f"\nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @professorXresso\n"
                      f"\n✪ Anti-Flood allows you to keep your chat clean from flooding."
                      f"\n✪ With the help of Blaclists you can blacklist words,sentences and stickers which you don't want to be used by group members."
                      f"\n✪ By enabling Reports, admins get notified when users reports in chat."
@@ -550,18 +550,18 @@ def luna_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_aselole")]]
+                [[InlineKeyboardButton(text="Back", callback_data="professor_aselole")]]
             ),
         )
 
-    elif query.data == "luna_puqi":
+    elif query.data == "professor_puqi":
         query.message.edit_text(
             text=f" ｢ Terms and Conditions 」\n"
                 f"\nTo use this bot, You need to agree with Terms and Conditions.\n"
                 f"\n✪ If someone is spamming your group, you can use report feature from your Telegram Client."
                 f"\n✪ Make sure antiflood is enabled, so that users cannot flood/spam your chat."
                 f"\n✪ Do not spam commands, buttons, or anything in bot PM, else you will be Ignored by bot or Gbanned."
-                f"\n✪ If you need to ask anything about this bot or you need help, reach us at @lunaXresso"
+                f"\n✪ If you need to ask anything about this bot or you need help, reach us at @professorXresso"
                 f"\n✪ Make sure you read rules and follow them when you join Support Chat."
                 f"\n✪ Spamming in Support Chat, will reward you GBAN and reported to Telegram as well.\n"
                 f"\nTerms & Conditions can be changed anytime.",
@@ -570,17 +570,17 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                     InlineKeyboardButton(text="Credits", callback_data="luna_angjay"),
-                     InlineKeyboardButton(text="Back", callback_data="luna_"),
+                     InlineKeyboardButton(text="Credits", callback_data="professor_angjay"),
+                     InlineKeyboardButton(text="Back", callback_data="professor_"),
                   ]
                 ]
             ),
         )
 
-    elif query.data == "luna_angjay":
+    elif query.data == "professor_angjay":
         query.message.edit_text(
             text=f"professor is a powerful bot for managing groups with additional features.\n"
-              f"\nLuna's Licensed Under The GNU (General Public License v3.0)\n"
+              f"\nprofessor's Licensed Under The GNU (General Public License v3.0)\n"
               f"\nIf you have any question about professor,"
               f"\nreach us at Support Chat.",
             parse_mode=ParseMode.MARKDOWN,
@@ -588,8 +588,8 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                     InlineKeyboardButton(text="Back", callback_data="luna_puqi"),
-                     InlineKeyboardButton(text="☎️ Support", url=f"https://t.me/lunaXresso"),
+                     InlineKeyboardButton(text="Back", callback_data="professor_puqi"),
+                     InlineKeyboardButton(text="☎️ Support", url=f"https://t.me/professorXresso"),
                   ]
                 ]
             ),
@@ -919,7 +919,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(luna_about_callback, pattern=r"luna_")
+    about_callback_handler = CallbackQueryHandler(professor_about_callback, pattern=r"professor_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
