@@ -1,4 +1,4 @@
-from professer.mongo import db
+from professor.mongo import db
 from typing import Dict, List, Union
 
 
