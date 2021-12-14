@@ -22,7 +22,7 @@ from pyrogram import filters
 from professor import BOT_ID, arq
 from professor.helper_extra.aichat import add_chat, get_session, remove_chat
 from professor.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from professor.pyrogramee.pyrogram import pbot as luna
+from professor.pyrogramee.pyrogram import pbot as professor
 
 translator = google_translator()
 
