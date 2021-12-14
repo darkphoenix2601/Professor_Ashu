@@ -23,7 +23,7 @@ SOFTWARE.
 """
 from asyncio import gather
 
-from professer import aiohttpsession as session
+from professor import aiohttpsession as session
 
 
 async def get(url: str, *args, **kwargs):
