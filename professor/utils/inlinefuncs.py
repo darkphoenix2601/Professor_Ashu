@@ -27,17 +27,17 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InputTextMessageContent)
 from search_engine_parser import GoogleSearch
 
-from professer import DEV_USERS
-from professer import LOG_GROUP_ID
-from professer import pbot as app 
-from professer.modules.memek import arq
-from professer.core.keyboard import ikb
-from professer.core.tasks import _get_tasks_text, all_tasks, rm_task
-from professer.core.types import InlineQueryResultCachedDocument
-from professer.modules.info import get_chat_info, get_user_info
-from professer.modules.music import download_youtube_audio
-from professer.utils.functions import test_speedtest
-from professer.utils.pastebin import paste
+from professor import DEV_USERS
+from professor import LOG_GROUP_ID
+from professor import pbot as app 
+from professor.modules.memek import arq
+from professor.core.keyboard import ikb
+from professor.core.tasks import _get_tasks_text, all_tasks, rm_task
+from professor.core.types import InlineQueryResultCachedDocument
+from professor.modules.info import get_chat_info, get_user_info
+from professor.modules.music import download_youtube_audio
+from professor.utils.functions import test_speedtest
+from professor.utils.pastebin import paste
 
 MESSAGE_DUMP_CHAT = LOG_GROUP_ID
 
